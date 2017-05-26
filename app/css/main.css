@@ -435,10 +435,10 @@ section.shares {
 
 .clients {
   float: left;
-  width: 50%;
-  padding: 0 15px; }
+  width: 50%; }
   @media (max-width: 993px) {
     .clients {
+      padding: 0 15px;
       width: 100%; } }
 
 .no-padding-right {
@@ -458,10 +458,11 @@ section.shares {
 
 .business {
   width: 49%;
-  padding: 0 15px;
   float: right; }
   @media (max-width: 993px) {
     .business {
+      float: left;
+      padding: 0 15px;
       width: 100%; } }
 
 .footer-nav {
