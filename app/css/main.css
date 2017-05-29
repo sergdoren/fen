@@ -215,12 +215,17 @@ nav {
     -moz-transition: 0.3s;
     transition: 0.3s; }
     .menu__bottom-href, .menu__bottom-href-burger {
+      cursor: pointer;
       padding-top: 5px;
       line-height: 45px;
       border-bottom: 5px solid transparent;
+      display: inline-block;
+      position: relative;
       transition: 0.05s; }
       .menu__bottom-href:hover, .menu__bottom-href-burger:hover {
         border-bottom: 5px solid #7a42b6; }
+        .menu__bottom-href:hover .menu__bottom-href-list, .menu__bottom-href-burger:hover .menu__bottom-href-list {
+          display: block; }
       @media (max-width: 993px) {
         .menu__bottom-href, .menu__bottom-href-burger {
           padding-left: 26px;
@@ -236,6 +241,25 @@ nav {
         overflow: hidden;
         border-top: 15px solid #e6e6e6;
         display: block; } }
+    .menu__bottom-href-list {
+      height: calc(4 * 45px);
+      width: 200px;
+      position: absolute;
+      top: 54px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 99;
+      box-shadow: 1px 2px 2px 0 #282828;
+      display: none; }
+    .menu__bottom-href-inlist {
+      line-height: 45px;
+      display: block;
+      background-color: #ffffff;
+      padding-left: 10px;
+      transition: 0.3s; }
+      .menu__bottom-href-inlist:hover {
+        border-right: 5px solid #7a42b6; }
     .menu__bottom-href-burger {
       display: none;
       font-size: 36px; }
@@ -517,6 +541,7 @@ section.shares {
     padding-bottom: 10px; }
 
 footer {
+  padding-bottom: 50px;
   border-top: 1px solid black; }
   footer::after {
     clear: both;
